@@ -1,0 +1,31 @@
+<div class="container-fluid country overflow-hidden py-5">
+    <div class="container py-5">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
+            <div class="sub-style">
+                <h5 class="sub-title text-primary px-3">COUNTRIES WE OFFER</h5>
+            </div>
+            <h1 class="display-5 mb-4">Student Visa Services for the Following Countries</h1>
+            <p class="mb-0">At SRI Consultancy, we pride ourselves on providing top-notch guidance and support through our experienced and dedicated counselors. Our team is committed to helping students navigate the complexities of the visa application process, ensuring they have the best possible chance of success. We offer comprehensive visa services for a wide range of countries.</p>
+        </div>
+        <div class="row g-4 text-center">
+            {% for country in countries %}
+            <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+                <div class="country-item">
+                    <div class="rounded overflow-hidden">
+                        <img src="{{ country.image.url }}" class="img-fluid w-100 rounded" alt="{{ country.name }}">
+                    </div>
+                    <div class="country-flag">
+                        <img src="{{ country.flag_image.url }}" class="img-fluid rounded-circle" alt="{{ country.name }} Flag">
+                    </div>
+                    <div class="country-name">
+                        <a href="{{ country.url }}" class="text-white fs-4" target="_blank">{{ country.name }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-12">
+                <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>

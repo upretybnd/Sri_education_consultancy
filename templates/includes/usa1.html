@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Study in the US?</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Basic styling for smooth scrolling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px; /* Set the height of your navbar */
+            background-color: #333; /* Example background color */
+            z-index: 1001; /* Ensure it’s above the menu-container */
+        }
+
+        /* Fixed Menu styling with top offset below navbar */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: fixed;
+            top: 60px; /* Offset equal to the navbar’s height */
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px;
+            z-index: 1000; /* Lower than navbar but above other content */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item h3 {
+            cursor: pointer;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+
+        .menu-item.active h3,
+        .menu-item h3:hover {
+            color: #0056b3; /* Active or hover color */
+        }
+
+        /* Styling for sections */
+        .full-page-content {
+            padding: 40px;
+            margin-top: 140px; /* Account for navbar + menu-container height */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <!-- Add navbar content here (e.g., links, logo) -->
+    </div>
+
+    <!-- Fixed Menu -->
+    <div class="menu-container">
+        <div class="menu-item" id="menu-overview">
+            <h3><a href="#overview" class="text-primary">Overview</a></h3>
+        </div>
+        <div class="menu-item" id="menu-why-study">
+            <h3><a href="#why-study" class="text-primary">Why Study</a></h3>
+        </div>
+        <div class="menu-item" id="menu-getting-started">
+            <h3><a href="#getting-started" class="text-primary">Getting Started</a></h3>
+        </div>
+    </div>
+
+    <!-- Page Sections -->
+    <div id="overview" class="full-page-content">
+        <h2>Overview</h2>
+        <p>The United States offers top-notch universities, a flexible curriculum, and a vibrant student life. Discover the opportunities that await in the US!</p>
+    </div>
+
+    <div id="why-study" class="full-page-content">
+        <h2>Why Study in the US?</h2>
+        <p>The US is known for its diverse culture, innovative research, and vast array of educational programs. Here, you can grow both academically and personally while exploring new perspectives.</p>
+    </div>
+
+    <div id="getting-started" class="full-page-content">
+        <h2>Getting Started</h2>
+        <p>Ready to begin your journey? Learn about application processes, financial aid, and everything you need to make your study abroad dream a reality in the US.</p>
+    </div>
+
+    <!-- JavaScript to handle active state -->
+    <script>
+        // Function to add "active" class to the current menu item based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.full-page-content');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            let currentSection = '';
+
+            // Find the section currently in the viewport
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100; // Adjust for fixed menu height
+                if (pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            // Remove active class from all menu items, then highlight the current one
+            menuItems.forEach((item) => {
+                item.classList.remove('active');
+                if (item.id === 'menu-' + currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+{% endblock %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Study in the US?</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Basic styling for smooth scrolling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px; /* Set the height of your navbar */
+            background-color: #333; /* Example background color */
+            z-index: 1001; /* Ensure it’s above the menu-container */
+        }
+
+        /* Fixed Menu styling with top offset below navbar */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: fixed;
+            top: 60px; /* Offset equal to the navbar’s height */
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px;
+            z-index: 1000; /* Lower than navbar but above other content */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item h3 {
+            cursor: pointer;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+
+        .menu-item.active h3,
+        .menu-item h3:hover {
+            color: #0056b3; /* Active or hover color */
+        }
+
+        /* Styling for sections */
+        .full-page-content {
+            padding: 40px;
+            margin-top: 140px; /* Account for navbar + menu-container height */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <!-- Add navbar content here (e.g., links, logo) -->
+    </div>
+
+    <!-- Fixed Menu -->
+    <div class="menu-container">
+        <div class="menu-item" id="menu-overview">
+            <h3><a href="#overview" class="text-primary">Overview</a></h3>
+        </div>
+        <div class="menu-item" id="menu-why-study">
+            <h3><a href="#why-study" class="text-primary">Why Study</a></h3>
+        </div>
+        <div class="menu-item" id="menu-getting-started">
+            <h3><a href="#getting-started" class="text-primary">Getting Started</a></h3>
+        </div>
+    </div>
+
+    <!-- Page Sections -->
+    <div id="overview" class="full-page-content">
+        <h2>Overview</h2>
+        <p>The United States offers top-notch universities, a flexible curriculum, and a vibrant student life. Discover the opportunities that await in the US!</p>
+    </div>
+
+    <div id="why-study" class="full-page-content">
+        <h2>Why Study in the US?</h2>
+        <p>The US is known for its diverse culture, innovative research, and vast array of educational programs. Here, you can grow both academically and personally while exploring new perspectives.</p>
+    </div>
+
+    <div id="getting-started" class="full-page-content">
+        <h2>Getting Started</h2>
+        <p>Ready to begin your journey? Learn about application processes, financial aid, and everything you need to make your study abroad dream a reality in the US.</p>
+    </div>
+
+    <!-- JavaScript to handle active state -->
+    <script>
+        // Function to add "active" class to the current menu item based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.full-page-content');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            let currentSection = '';
+
+            // Find the section currently in the viewport
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100; // Adjust for fixed menu height
+                if (pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            // Remove active class from all menu items, then highlight the current one
+            menuItems.forEach((item) => {
+                item.classList.remove('active');
+                if (item.id === 'menu-' + currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Your specific page content goes here -->
+<h1>Welcome to Sri!</h1>
+<!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+<!-- Carousel Start -->
+    {% include 'includes/mainbanner.html' %}
+    {% include 'includes/chairperson.html' %}
+    {% include 'includes/countries.html' %}
+    <div class="container d-flex justify-content-center">
+    <div class="col-lg-6 wow fadeInUp text-center" data-wow-delay="0.3s">
+        <div class="sub-style">
+                <h5 class="sub-title text-primary px-3">Get a free Counselling!</h5>
+        </div>
+        <h1 class="display-5 mb-4">Just send a message.</h1>
+        <form>
+            <div class="row g-4">
+                <div class="col-lg-12 col-xl-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        <label for="name">Your Name</label>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        <label for="email">Your Email</label>
+                    </div>
+                </div>
+                <div class="col-12 mx-auto">
+                    <div class="form-floating">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                        <label for="phone">Your Phone Number</label>
+                    </div>
+                </div>
+                <div class="col-12 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="col-12 mx-auto">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="col-12 mx-auto">
+                    <button class="btn btn-primary w-100 py-3">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Carousel End -->
+
+{% endblock %}

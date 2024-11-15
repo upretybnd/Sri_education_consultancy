@@ -1,0 +1,42 @@
+{% load static %}
+<!-- Navbar & Hero Start -->
+<!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h5 class="display-5 text-secondary m-0"><img src="{% static 'img/brand-logo.png' %}" class="img-fluid" alt=""></h5>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="{% url 'home' %}" class="nav-item nav-link ">Home</a>
+                    <a href="{% url 'about_us' %}" class="nav-item nav-link">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Abroad Study</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{% url 'usa' %}" class="dropdown-item">Study in US</a>
+                            <a href="{% url 'austrilia' %}" class="dropdown-item">Study in Australia</a>
+                            <a href="{% url 'canada' %}" class="dropdown-item">Study in Canada</a>
+                            <a href="{% url 'japan' %}" class="dropdown-item">Study in Japan</a>
+                            <a href="{% url 'korea' %}" class="dropdown-item">Study in Korea</a>
+                            <a href="{% url 'europe' %}" class="dropdown-item">Study in Europe</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Test Preparation</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="{% url 'ielts' %}" class="dropdown-item">IELTS</a>
+                            <a href="{% url 'pte' %}" class="dropdown-item">PTE</a>
+                        </div>
+                    </div>
+                    <a href="{% url 'contact_us' %}" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+<!-- Navbar & Hero End -->

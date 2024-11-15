@@ -1,0 +1,374 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <head>
+        <style>
+        /* Center the FAQ section on the page */
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .accordion {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .accordion-button {
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .bg-breadcrumb {
+            background-color: #343a40;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .sub-style {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* General Styles for Page */
+        section {
+            padding: 40px 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: green;
+        }
+        .text-white {
+            color: white;
+        }
+        </style>
+    </head>
+
+   <!-- Hero Section for PTE Preparation Page -->
+     <!-- Hero Section for PTE Preparation Page -->
+    <div class="bg-breadcrumb">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <!-- Add content inside the carousel-item -->
+            <h5 class="text-white px-3">Prepare for ielts with the best.</h5>
+            <p class="text-white">Join our course to get the best preparation for IELTS exams.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Overview Section -->
+    <section id="overview" class="container py-5">
+    <div class="section-title text-center mb-5">
+          <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="sub-style">
+                <h1 class="sub-title text-primary px-3">Overview!</h1>
+            </div>
+        </div>
+    </div>
+        <P>Achieving a high score in the International English Language Testing System (IELTS) is often a crucial step towards unlocking a wealth of educational and professional opportunities abroad. Whether you're applying to universities, pursuing a scholarship, or planning to live and work in an English-speaking country, a strong IELTS score can make all the difference. Our IELTS preparation program is specifically designed to equip you with the essential skills and strategies needed to succeed in each of the four test sections: Listening, Reading, Writing, and Speaking.</P>
+
+    <div class="row align-items-center">
+        <!-- Image on the left -->
+        <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.3s">
+            <img src="img/ielts-class.jpg" class="img-fluid rounded shadow-lg" alt="PTE Class Image">
+        </div>
+        <!-- Description on the right -->
+        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+            <h3 class="mb-3">Comprehensive IELTS Preparation Program</h3>
+            <p>Our IELTS preparation program offers a comprehensive approach that focuses on all sections of the test:</p>
+
+            <h4 class="mt-4">Listening</h4>
+            <P>The Listening section tests your ability to understand spoken English in a variety of contexts, such as lectures, conversations, and discussions. Our program helps you sharpen your listening skills by providing practice with different accents and audio formats that are commonly featured in the IELTS exam. You’ll develop the ability to grasp key ideas, infer meaning from context, and accurately answer questions based on what you hear.</P>
+
+            <h4 class="mt-4">Reading</h4>
+            The Reading section evaluates your ability to comprehend and analyze written texts. It consists of academic and general texts, which require critical reading skills. Our preparation includes strategies to efficiently extract information, improve reading speed, and understand the nuances of different text types, whether they involve factual details, opinions, or inferences. We’ll guide you on how to approach different question formats, like multiple-choice, matching headings, and short answer questions, to maximize your score.
+
+            <h4 class="mt-4">Writing</h4>
+            <p>Writing is a section where clarity, coherence, and structure are key. We provide tailored lessons that teach you how to write clear, well-organized essays and reports, particularly for the Task 1 and Task 2 formats. You’ll learn the techniques to present your arguments logically, manage your time effectively, and enhance your grammatical accuracy. Through targeted writing practice and feedback, we aim to boost your confidence in crafting high-quality responses that meet the IELTS standards.</p>
+
+            <h4 class="mt-4">Speaking</h4>
+            <p>In the Speaking section, you’ll be assessed on your ability to communicate fluently and naturally in English. Our program focuses on developing your conversational skills, enhancing pronunciation, and improving fluency and coherence. You’ll participate in mock speaking tests with expert trainers, receiving personalized feedback and tips to help you express your ideas confidently, organize your thoughts clearly, and respond to questions effectively.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- IELTS Classes Section -->
+    <section id="ielts-classes" class="container py-5">
+        <div class="section-title">
+            <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="sub-style">
+                <h2 class="sub-title text-primary px-3">IELTS CLASSES</h2>
+            </div>
+        </div>
+            <p>Our expert trainers offer comprehensive, customized IELTS classes for all levels. Whether you're a beginner or looking to refine your skills, we have the perfect class for you.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>General IELTS Preparation</h3>
+            <P>Our General IELTS classes are carefully designed for students who wish to gain a comprehensive understanding of the exam format while receiving focused preparation for each section of the test. Whether you're planning to pursue higher education, immigrate, or seek professional opportunities in English-speaking countries, our program ensures you are thoroughly prepared for success.</P>
+            </div>
+            <div class="col-md-6">
+                <h3>IELTS Academic Classes</h3>
+            <P>Perfect for students aiming for higher education in English-speaking countries, our Academic IELTS classes are specifically tailored to help you succeed in the academic version of the IELTS exam. These classes provide in-depth preparation for each section of the test, ensuring you are fully equipped with the language skills and test strategies needed to achieve your best score.
+            </P></div>
+        </div>
+    </section>
+   <section id="pte-book" class="container py-5">
+                <div class="text-center mt-5">
+                 <div class="section-title">
+                       <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="sub-style">
+                <h2 class="sub-title text-primary px-3">Book ielts class now!</h2>
+            </div>
+        </div>
+                <div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm p-4">
+                <h3 class="card-title text-center mb-4"></h3>
+                <form method="POST" action="/book-pte-class">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <!-- Name Field -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <!-- Phone Number Field -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                <label for="phone">Your Phone Number</label>
+                            </div>
+                        </div>
+                        <!-- Preferred Date Field -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="preferred-date" placeholder="Preferred Date" required>
+                                <label for="preferred-date">Preferred Date for Class</label>
+                            </div>
+                        </div>
+                        <!-- Message Field -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="Leave a message here" style="height: 160px" required></textarea>
+                                <label for="message">Additional Message</label>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Booking</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+                 </section>
+
+    <!-- FAQ Section -->
+
+    <div class="faq-container">
+        <div class="accordion" id="faqAccordion">
+              <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="sub-style">
+                        <h1 class="sub-title text-primary px-3">FREQUENTLY ASKED QUESTIONS! (FAQ)</h1>
+              </div>
+        </div>
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is the IELTS exam format?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The IELTS exam consists of four sections: Listening, Reading, Writing, and Speaking. The Listening, Reading, and Writing sections are completed on the same day, while the Speaking section can be scheduled for a different day.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How long does it take to prepare for the IELTS exam?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The preparation time for IELTS varies based on your current level and goals. On average, it takes about 6-8 weeks of dedicated study to achieve a high score.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I take IELTS classes online?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we offer both in-person and online IELTS preparation classes. Choose the format that works best for you.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        What is the minimum score required for IELTS?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The minimum score required for IELTS depends on the institution or organization. However, a score of 6.5 to 7.0 is generally considered competitive for university admissions.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Can I take the IELTS exam multiple times?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, you can retake the IELTS exam as many times as you wish. Each time you take the exam, you will receive a new score report.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Is there any age limit for taking the IELTS exam?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        There is no upper age limit for taking the IELTS exam. However, candidates must be at least 16 years old to take the exam.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        What are the key strategies to score well in the IELTS Listening test?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        To score well in the Listening test, practice listening to various accents, pay attention to keywords, and follow the instructions carefully.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        How is the IELTS Writing test scored?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The IELTS Writing test is scored based on task response, coherence and cohesion, lexical resource, and grammatical range and accuracy.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Can I use a pen or pencil for the IELTS exam?
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        For the IELTS Listening, Reading, and Writing tests, you should use a pencil. For the Speaking test, however, no writing is required.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                        What should I bring on the day of the IELTS exam?
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        On the day of the exam, you should bring your valid passport or ID, a pencil, and eraser. Make sure to arrive at the test center at least 30 minutes before the scheduled time.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

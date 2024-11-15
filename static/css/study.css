@@ -1,0 +1,83 @@
+/* Adjust the alignment and spacing */
+#why-usa .section-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+}
+
+#why-usa .section-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced gap between title and content */
+}
+
+/* Adjust the alignment and spacing */
+#education-system .section-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+}
+
+#education-system .section-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced gap between title and content */
+}
+
+/* Adjust the alignment and spacing for Opportunities Section */
+#opportunities .section-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+}
+
+#opportunities .section-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced gap between title and content */
+}
+
+/* Adjust the alignment and spacing for Culture and Diversity Section */
+#culture-diversity .section-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+}
+
+#culture-diversity .section-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced gap between title and content */
+}
+
+/* Section Title: Further reduce margin-bottom */
+.section-title {
+    margin-bottom: 10px; /* Further reduced margin */
+}
+
+/* Container Fluid: Adjust top and bottom padding */
+.container-fluid {
+    padding-top: 2rem; /* Reduced top padding */
+    padding-bottom: 2rem; /* Reduced bottom padding */
+}
+
+/* Ensure responsive layout */
+@media (max-width: 992px) {
+    #education-system .col-xl-7,
+    #why-usa .col-xl-7,
+    #opportunities .col-xl-7,
+    #culture-diversity .col-xl-7 {
+        text-align: left;
+    }
+
+    #education-system .section-heading,
+    #why-usa .section-heading,
+    #opportunities .section-heading,
+    #culture-diversity .section-heading {
+        font-size: 24px;
+    }
+}

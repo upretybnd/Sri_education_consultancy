@@ -1,0 +1,110 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Study in the European Country?</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Styling for full-page sections */
+        .full-page-content {
+            display: none;
+            padding: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .active {
+            display: block; /* Show the selected section */
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .menu-item h3 {
+            cursor: pointer;
+            text-align: center;
+            color: #007bff;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .menu-item h3:hover,
+        .menu-item h3.active-title {
+            border-bottom: 2px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid country overflow-hidden py-5">
+        <div class="container py-5">
+
+            <!-- Section Title -->
+            <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 40px;">
+                <div class="sub-style">
+                    <h5 class="sub-title text-primary px-3">Why Study in the European Country?</h5>
+                </div>
+                <h1 class="display-5 mb-4">Explore Your Future in the European Country</h1>
+                <p>The European Country offers world-class education and amazing career opportunities in a multicultural environment.</p>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu-container">
+                <div class="menu-item">
+                    <h3 class="text-primary" onclick="showContent('overview', this)">Overview</h3>
+                </div>
+                <div class="menu-item">
+                    <h3 class="text-primary" onclick="showContent('education', this)">Education System in the European Country</h3>
+                </div>
+                <div class="menu-item">
+                    <h3 class="text-primary" onclick="showContent('processing', this)">Start Processing</h3>
+                </div>
+            </div>
+
+            <!-- Full-Page Sections -->
+            <div id="overview" class="full-page-content active">
+                <h2>Overview</h2>
+                <p>The United States offers top-notch universities, a flexible curriculum, and a vibrant student life.</p>
+            </div>
+
+            <div id="education" class="full-page-content">
+                <h2>Education System in the European Country</h2>
+                <p>The European Country education system offers various undergraduate, graduate, and doctoral programs emphasizing research and innovation.</p>
+            </div>
+
+            <div id="processing" class="full-page-content">
+                <h2>Start Processing</h2>
+                <p>Our expert counselors are here to help you through every step of the application process. Begin today!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(contentId, element) {
+            // Hide all full-page content sections
+            document.querySelectorAll('.full-page-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(contentId).classList.add('active');
+
+            // Remove 'active-title' class from all titles and add it to the clicked one
+            document.querySelectorAll('.menu-item h3').forEach(title => {
+                title.classList.remove('active-title');
+            });
+            element.classList.add('active-title');
+        }
+    </script>
+</body>
+</html>
+{% endblock %}
